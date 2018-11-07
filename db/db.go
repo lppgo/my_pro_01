@@ -14,7 +14,7 @@ var (
 //=================连接mongoDB数据库，并设置数据库参数===================
 func InitDB() error {
 	var err error
-	sess, err = mgo.Dial("10.168.110.178:27017")
+	sess, err = mgo.Dial("mongodb://username:pw@ip:port")
 	if err != nil {
 		fmt.Println("--------连接数据库异常-：-------")
 		fmt.Println(err.Error())
